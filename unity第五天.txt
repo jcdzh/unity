@@ -1,0 +1,71 @@
+shader嵌入到显示卡中的
+想专精shader可以去搜庄懂老师的课
+shader专门语言
+shader想要加入对象中就应该创建一个材质然后把其拖拽进去材质中去
+outline color是轮阔的意思
+都是对材质的设置最终的操作
+特殊的shader要找别人写
+
+物体轮廓
+1，创建材质outline
+2，指定着色器 BasicOutline
+3，指定纹理  Texture
+4，设置到物体中
+
+物理着色器
+基于物理特性的shader是unity 5.x的重大革新之一，所谓物理着色器
+就是遵从于物理学的能量守恒定律，可以创建出在不同的光照环境下
+都接近真实的效果
+physically Based Shading,PBS
+
+shader的挑选是在材质中的shader挑
+只要是使用的是unity的标准shader就是基于
+物理学的PBSshader着色器
+
+简介：
+1，附加了摄像机Camera组件的游戏对象
+2，向玩家捕获和显示世界的设备
+3，场景中摄像机的数量不受限制
+
+组件：
+transform变换组件
+Camera摄像机：向玩家捕获和显示世界
+Flare Layer耀斑层：激活可显示光源耀斑
+GUI Layer：激活可渲染二维GUI元素
+Audio Listener音频监听器：接受场景输入的音频流Audio
+Source并通过计算机的扬声器播放声音
+点入camera
+
+属性：
+CLear Flags清除标识：决定屏幕的空白部分如何处理
+Skybox天空盒：空白部分显示天空图案
+solid color 纯色：空白部分显示背景颜色
+Depth Only ：画中画效果时，小画面摄像机选择
+该项屏幕空部分信息只保留物体颜色信息
+Don‘t Clear不清除：不清除任何颜色或者深度缓存
+background背景：所有元素绘制后，没有天空盒的情况下，
+剩余屏幕的颜色
+Culling Mask选择遮庇岑：选择要照射的层Layer
+
+天空盒skybox
+围绕整个场景的包装器，用于模拟天空的材质、
+天空盒材质种类：6sided，procedural ，cubemap
+使用天空盒
+设置摄像机Clear FLags属性为skybox
+方式一：摄像机添加组件Skybox
+方法二：光照窗口
+window--lighting---environment Lighting---skybox
+可作为反射源将天空色彩反射到场景中物体
+
+Procedural属性
+sun太阳模式
+---None没有
+---Simple简单
+---Hight Quality高质量
+Atmoshpere Thickness大气层厚度
+Ground地面颜色
+如果为Environment Lighting的Sun属性设置一个平行光，
+场景中会根据平行光角度自动创建太阳，并且位置随平行
+光旋转而改变，如果不设置，系统将默认选择场景中最亮
+的平行光
+
