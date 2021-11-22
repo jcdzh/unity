@@ -1,0 +1,28 @@
+摄像机：
+projection投射方式：
+perspective透视：透视图，物体具有近大远小的效果
+orthographic正交：摄像机会均匀的渲染物体，没有透视感，通常小地图来使用
+size大小（正交模式）：摄像机视口的大小
+Field Of View视野（透视模式）：设置相机视野的远近距离
+Field Of View裁剪面：相机到开始和结束渲染的距离
+near近：绘制的最近点
+far远：绘制的最远点
+
+Viewport Rect视口矩形：标明这台相机视图将会在屏幕上绘制的屏幕坐标
+X：摄像机视图的开始水平位置
+Y：摄像机视图的开始垂直位置。
+W宽度：摄像机输出在屏幕上的宽度
+H高度：摄像机输出在屏幕上的高度
+Depth深度：相机在渲染顺序上的位置。具有较低深度的摄像机将在较高深度的摄像机之前渲染
+
+Clear Flags清除标识：决定屏幕的空白部分如何处理
+Skybox天空盒：空白部分显示天空盒图案
+Solid Color纯色：空白部分显示背景颜色
+Depth only仅深度：画中画效果时，小画面摄像机
+选择该项可清除屏幕空部分信息只保留物体的颜色信息
+Don’t Clear不清除：不清除任何颜色或者深度缓存。
+BackGround背景：所有元素绘制后，没有天空盒的情况下
+剩余屏幕的颜色
+Culling Mask选择遮蔽层：选择要照射的层layer
+
+收看了learn unity the most basic tutorial ，i‘ll ever make-youtube
